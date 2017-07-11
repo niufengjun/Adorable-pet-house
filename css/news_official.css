@@ -1,0 +1,64 @@
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	list-style-type: none;
+}
+body{
+	background-color: #eaeaea;
+}
+.note .note_title{
+	width:100%;
+	height:46px;
+	background-color: #df4442;
+}
+.note .note_title span{
+	height:44px;
+	width:24.5%;
+	color:white;
+	float:left;
+	font-size:18px;
+	line-height: 44px;
+	text-align: center;
+}
+.note .note_title .recommend{
+	border-bottom:2px solid white;
+}
+.content{
+	width:100%;
+	background-color: white;
+}
+.content ul li{
+	border-bottom:1px solid gray;
+	padding:10px 5px 5px 5px;
+}
+.content ul li .left{
+	float:left;
+	width:50%;
+}
+.content ul li .left h4{
+	margin-bottom:15%;
+}
+.content ul li .left span{
+	color:#c9c9c9;
+}
+.content ul li .left .name{
+	float:left;
+}
+.content ul li .left .hot{
+	float: right;
+	position: relative;
+	right:5px;
+}
+.content ul li .left img{
+	width:10%;
+	height:10%;
+	float: right;
+	position: relative;
+	top:5px;
+	right:6px;
+}
+.content ul li .animalPic{
+	width:50%;
+	height:80%;
+}

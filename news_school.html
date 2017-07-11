@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>萌宠之家-资讯-笔记</title>
+    <title>萌宠之家-资讯-学堂</title>
     <meta charset="utf-8">
     <!-- 点击号码时，不默认拨打 -->
     <meta name="format-detection" content="telephone=no">
@@ -13,22 +13,21 @@
     <meta name="apple-touch-fullscreen" content="yes">
     <!-- 允许跨域请求，*表示接受任何URL地址，如果指定URL就只接受此地址跨域 -->
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
-    <link type="text/css" rel="stylesheet" href="css/news_note.css">
+    <link type="text/css" rel="stylesheet" href="css/news_school.css">
 </head>
 <body ng-app="app">
     <div class="note" ng-controller="main">
         <div class="note_title">
             <a href="news_recommend.html"><span>推荐</span></a>
-            <a href="#"><span class="recommend">笔记</span></a>
-            <a href="news_school.html"><span>学堂</span></a>
+            <a href="news_note.html"><span>笔记</span></a>
+            <a href="#"><span class="recommend">学堂</span></a>
             <a href="news_official.html"><span>官方</span></a>
         </div>
         <div class="nav" >
             <a href="#all"><span class="all">全部</span></a>
-            <a href="#new"><span>最新</span></a>
-            <a href="#topic"><span>专题</span></a>
-            <a href="#interest"><span>趣味</span></a>
-            <a href="#pictures"><span>美图</span></a>
+            <a href="#new"><span>疾病</span></a>
+            <a href="#topic"><span>养护</span></a>
+            <a href="#interest"><span>产品</span></a>
         </div>
         <div class="c1"></div>
         <div class="content" id="all">
@@ -46,7 +45,7 @@
         </div>
         <div id="new" class="content">
             <ul ng-controller="content">
-                <li ng-repeat="item in data.new">
+                <li ng-repeat="item in data.illness">
                     <div class="left">
                         <h4>{{item.cap}}</h4>
                         <span class="name">{{item.name}}</span>
@@ -59,7 +58,7 @@
         </div>
         <div id="topic" class="content">
             <ul ng-controller="content">
-                <li ng-repeat="item in data.topic">
+                <li ng-repeat="item in data.conserve">
                     <div class="left">
                         <h4>{{item.cap}}</h4>
                         <span class="name">{{item.name}}</span>
@@ -72,7 +71,7 @@
         </div>
         <div id="interest" class="content">
             <ul ng-controller="content">
-                <li ng-repeat="item in data.interest">
+                <li ng-repeat="item in data.product">
                     <div class="left">
                         <h4>{{item.cap}}</h4>
                         <span class="name">{{item.name}}</span>
@@ -83,29 +82,9 @@
                 </li>
             </ul>
         </div>
-        <div id="pictures" class="content">
-            <ul ng-controller="content">
-                <li ng-repeat="item in data.pictures">
-                    <h4>{{item.cap}}</h4>
-                    <div class="middle">
-                        <img ng-src="{{item.img1}}">
-                        <img ng-src="{{item.img2}}">
-                        <img ng-src="{{item.img3}}">
-                    </div>
-                    <div class="bottom">
-                        <span class="name">{{item.name}}</span>
-                        <span class="hot">{{item.hot}}</span>
-                        <img ng-src="{{item.img}}">
-                    </div>                     
-                </li>
-            </ul>
-        </div>
     </div>
 </body>
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/angular.js"></script>
-<script type="text/javascript" src="js/news_note.js"></script>
-<script type="text/javascript">
-
-</script>
+<script type="text/javascript" src="js/news_school.js"></script>
 </html>

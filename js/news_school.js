@@ -22,6 +22,6 @@ app.controller("content",function($scope,$http){
 		method:"get",
 		url:"C:/Users/蓝科教育/Documents/GitHub/Adorable-pet-house/json/data.json"
 	}).success(function(res){
-		$scope.data=res.note;
+		$scope.data=res.school;
 	})
 });
