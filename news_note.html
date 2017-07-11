@@ -15,7 +15,49 @@
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <link type="text/css" rel="stylesheet" href="css/news_note.css">
 </head>
-<body>
+<body ng-app="app">
+    <div class="note" ng-controller="main">
+        <div class="note_title">
+            <a href="#"><span>推荐</span></a>
+            <a href="#"><span>笔记</span></a>
+            <a href="#"><span>学堂</span></a>
+            <a href="#"><span>官方</span></a>
+        </div>
+        <div class="nav" >
+            <a href="#all"><span>全部</span></a>
+            <a href="#new"><span>最新</span></a>
+            <a href="#topic"><span>专题</span></a>
+            <a href="#interest"><span>趣味</span></a>
+            <a href="#pictures"><span>美图</span></a>
+        </div>
+        <div class="c1"></div>
+        <div class="content" id="all">
+            <ul ng-controller="content">
+                <li ng-repeat="item in data.note">
+                    <div class="left">
+                        <h4>{{item.cap}}</h4>
+                        <span class="name">{{item.name}}</span>
+                        <span class="hot">{{item.hot}}</span>
+                        <img ng-src="{{item.img}}"> 
+                    </div>
+                    <img ng-src="{{item.img1}}" class="animalPic">
+                </li>
+            </ul>
+        </div>
+        <div id="new" class="content">
+            <ul ng-controller="content">
+                <li ng-repeat="item in data.note">
+                    <div class="left">
+                        <h4>{{item.cap}}</h4>
+                        <span class="name">{{item.name}}</span>
+                        <span class="hot">{{item.hot}}</span>
+                        <img ng-src="{{item.img}}">
+                    </div>
+                    <img ng-src="{{item.img1}}" class="animalPic">
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/angular.js"></script>
