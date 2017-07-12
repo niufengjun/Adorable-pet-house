@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>萌宠之家-资讯-推荐</title>
+    <meta charset="utf-8">
+    <!-- 点击号码时，不默认拨打 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- 视口约束 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!-- webAPP全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 充满整个屏幕，touch触摸 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!-- 允许跨域请求，*表示接受任何URL地址，如果指定URL就只接受此地址跨域 -->
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link type="text/css" rel="stylesheet" href="css/news_recommend.css">
+</head>
+<body>
+    <div class="note" ng-controller="main">
+        <div class="note_title">
+            <a href="news_recommend.html"><span class="recommend">推荐</span></a>
+            <a href="#"><span>笔记</span></a>
+            <a href="news_school.html"><span>学堂</span></a>
+            <a href="news_official.html"><span>官方</span></a>
+        </div>
+        <div class="wrap">
+           <ul>
+               <li style="z-index:1"><img src="img/tuijian-banner@2x.png"></li>
+               <li><img src="img/tuijian-banner@2x.png"></li>
+               <li><img src="img/tuijian-banner@2x.png"></li>
+               <li><img src="img/tuijian-banner@2x.png"></li>
+               <li><img src="img/tuijian-banner@2x.png"></li>
+           </ul>
+           <ol>
+               <li class="active"></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ol> 
+        </div>
+        <div class="content"  ng-app="app">
+            <ul ng-controller="content">
+                <li ng-repeat="item in data.all">
+                    <div class="left">
+                        <h4>{{item.cap}}</h4>
+                        <span class="name">{{item.name}}</span>
+                        <span class="hot">{{item.hot}}</span>
+                        <img ng-src="{{item.img}}"> 
+                    </div>
+                    <img ng-src="{{item.img1}}" class="animalPic">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/news_recommend.js"></script>
+</html>
