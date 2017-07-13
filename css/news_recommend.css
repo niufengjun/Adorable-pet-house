@@ -24,47 +24,70 @@ body{
 .note .note_title .recommend{
 	border-bottom:2px solid white;
 }
-.wrap{
+/*轮播开始*/
+.lunbo{
 	width:100%;
-	position: relative;
-	overflow:hidden;
+	height:161px;
 }
-.wrap img{
-	display: block;
+.slider-contaner{
+width:100%;
+position:relative;
+}
+.slider-contaner img{
 	width:100%;
 	height:100%;
 }
-.wrap ul{
-	height:136px;
-	z-index: 1;
-	position: relative;
+.slider-item + .slider-item{
+opacity:0;
 }
-.wrap ol{
-	height:20px;
-	z-index: 2;
-	position: absolute;
-	bottom:0;
-	right:0;
+.slider-item{
+position:absolute;
+animation-timing-function: linear;
+animation-name:fade;
+animation-iteration-count: infinite;
+background-size:100%;
 }
-.wrap>ul>li{
-    position: absolute;
-    top:0;
-    left:0;
+.slider-item{
+animation-duration: 20s;
 }
-.wrap>ol>li{
-	float:left;
-	width:10px;
-	height:10px;
-	border-radius: 50%;
-	border:2px solid red;
-	margin-right:5px;
+.slider-item1{
+animation-delay: -1s;
 }
-.wrap ol li:hover{
-	background-color:red;
+.slider-item2{
+animation-delay: 3s;
 }
-.wrap li.active{
-	background-color:red;
+.slider-item3{
+animation-delay: 7s;
 }
+.slider-item4{
+animation-delay: 11s;
+}
+.slider-item5{
+animation-delay: 15s;
+}
+@keyframes fade{
+0%{
+opacity:0;
+z-index:2;
+}
+5%{
+opacity:1;
+z-index: 1;
+}
+20%{
+opacity:1;
+z-index:1;
+}
+25%{
+opacity:0;
+z-index:0;
+}
+100%{
+opacity:0;
+z-index:0;
+}
+}
+/*轮播结束*/
 .content{
 	width:100%;
 	background-color: white;
@@ -72,6 +95,9 @@ body{
 .content ul li{
 	border-bottom:1px solid gray;
 	padding:5px 5px;
+}
+.content ul li:last-child{
+	margin-bottom: 50px;
 }
 .content ul li .left{
 	float:left;

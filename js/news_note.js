@@ -3,14 +3,28 @@ $(function(){
 	    $(".note .note_title a span").removeClass()
 	    $(this).addClass("recommend");
     });
+    $("#all").siblings("#pictures").css({
+        marginBottom:"50px"
+    })
     $(".note .nav a span").click(function(){
     	$(".note .nav a span").removeClass()
         $(this).addClass("all");
     	var id=$(this).parent().attr("href");
-    	$(".content").hide();
-        $(id).css({
-        	display:"block"
-        })
+        if(id==="#all"){
+            $(".content").show();
+            $("#new").children().children().last().removeAttr("style");
+            $("#topic").children().children().last().removeAttr("style");
+            $("#interest").children().children().last().removeAttr("style");
+            $("#pictures").children().children().last().removeAttr("style");
+        }else{
+            $(".content").hide();
+            $(id).children().children().last().css({
+                marginBottom:"50px"
+            });
+            $(id).css({
+                display:"block",
+            })
+        }	
     })
 });
 var app=angular.module("app",[]);

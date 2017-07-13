@@ -66,6 +66,9 @@ body{
 	border-bottom:1px solid gray;
 	padding:5px 5px;
 }
+/*.content ul li:last-child{
+	margin-bottom: 50px;
+}*/
 .content ul li .left{
 	float:left;
 	width:50%;

@@ -19,26 +19,22 @@
     <div class="note" ng-controller="main">
         <div class="note_title">
             <a href="news_recommend.html"><span class="recommend">推荐</span></a>
-            <a href="#"><span>笔记</span></a>
+            <a href="news_note.html"><span>笔记</span></a>
             <a href="news_school.html"><span>学堂</span></a>
             <a href="news_official.html"><span>官方</span></a>
         </div>
-        <div class="wrap">
-           <ul>
-               <li style="z-index:1"><img src="img/tuijian-banner@2x.png"></li>
-               <li><img src="img/tuijian-banner@2x.png"></li>
-               <li><img src="img/tuijian-banner@2x.png"></li>
-               <li><img src="img/tuijian-banner@2x.png"></li>
-               <li><img src="img/tuijian-banner@2x.png"></li>
-           </ul>
-           <ol>
-               <li class="active"></li>
-               <li></li>
-               <li></li>
-               <li></li>
-               <li></li>
-           </ol> 
+        <div class="lunbo">
+            <div class="slider-contaner">
+               <ul class="slider">
+                   <li class="slider-item slider-item1"><img src="img/tuijian-banner@2x.png"></li>
+                   <li class="slider-item slider-item2"><img src="img/tuijian-banner@2x.png"></li>
+                   <li class="slider-item slider-item3"><img src="img/tuijian-banner@2x.png"></li>
+                   <li class="slider-item slider-item4"><img src="img/tuijian-banner@2x.png"></li>
+                   <li class="slider-item slider-item5"><img src="img/tuijian-banner@2x.png"></li>
+               </ul>
+            </div>
         </div>
+        
         <div class="content"  ng-app="app">
             <ul ng-controller="content">
                 <li ng-repeat="item in data.all">
