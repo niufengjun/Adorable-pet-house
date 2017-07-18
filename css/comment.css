@@ -121,6 +121,9 @@ div,html,body,p,span,a,ul,i,em,li,ol,img,input,button,h1,h2,h3,h4,h5,h6{
 	padding:0 0 5% 0;
 	font-size:1.2rem;
 }
+.comment .Pro_details ul li:last-child{
+	margin-bottom:50px;
+}
 .comment .Pro_details ul li p{
 	line-height:28px;
 }

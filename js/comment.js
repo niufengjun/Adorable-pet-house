@@ -23,6 +23,10 @@ $(function(){
 		console.log(windowWidth);
 		document.documentElement.style.fontSize=15*$("ul li").width()/windowWidth+"px";
 	};
+	var windowWidth=document.documentElement.clientWidth;
+		console.log($("ul li").width());
+		console.log(windowWidth);
+		document.documentElement.style.fontSize=15*$("ul li").width()/windowWidth+"px";
 	$(".back").click(function(){
         window.history.back(-1);
     })
