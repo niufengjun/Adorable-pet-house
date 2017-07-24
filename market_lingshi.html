@@ -27,7 +27,7 @@
         </div>
         <div ng-app="myApp" class="product">
             <ul ng-controller="main">
-                <li ng-repeat="item in data.lingshi">
+                <li ng-repeat="item in data.lingshi" ng-click="part()">
                     <div class="pic">
                         <img ng-src="{{item.img1}}" class="pic_1">
                         <img ng-src="{{item.img2}}" class="pic_2" ng-show="item.img2==''?false:true">

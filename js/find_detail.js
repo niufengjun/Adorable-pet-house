@@ -42,5 +42,11 @@ $(function(){
 	})
 	   $(".back").click(function(){
         window.history.back(-1);
-    })	
+    });
+    $(".friend").click(function(){
+    	window.location.href="find_content.html"
+    });
+    $(".attention").click(function(){
+    	window.location.href="find_content.html"
+    })
 })

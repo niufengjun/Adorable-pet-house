@@ -18,7 +18,10 @@ $(function(){
 	});
 	$(".back").click(function(){
         window.history.back(-1);
-    })
+   });
+   $(".cap").click(function(){
+        window.location.href="market_home.html";
+    });
 });
     var app=angular.module("myApp",[]);
 	app.controller("main",function($scope,$http){
@@ -26,5 +29,8 @@ $(function(){
         $http.get("json/data.json").success(function(res){
             console.log(res);
             $scope.data=res.data;
-        })
+        });
+        $scope.part=function(){
+        	window.location.href="comment.html";
+        }
 	})
