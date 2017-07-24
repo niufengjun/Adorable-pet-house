@@ -25,7 +25,7 @@
         </div>
         <div class="content">
             <ul ng-controller="content">
-                <li ng-repeat="item in data.off">
+                <li ng-repeat="item in data.off" ng-click="part()">
                     <div class="left">
                         <h4>{{item.cap}}</h4>
                         <span class="name">{{item.name}}</span>

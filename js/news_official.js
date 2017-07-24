@@ -14,5 +14,8 @@ app.controller("content",function($scope,$http){
 		url:"json/data.json"
 	}).success(function(res){
 		$scope.data=res.official;
-	})
+	});
+	$scope.part=function(){
+		window.location.href="news_details.html"
+	}
 });

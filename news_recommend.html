@@ -37,7 +37,7 @@
         
         <div class="content"  ng-app="app">
             <ul ng-controller="content">
-                <li ng-repeat="item in data.all">
+                <li ng-repeat="item in data.all" ng-click="part()">
                     <div class="left">
                         <h4>{{item.cap}}</h4>
                         <span class="name">{{item.name}}</span>

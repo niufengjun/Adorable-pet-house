@@ -32,7 +32,7 @@
         <div class="c1"></div>
         <div class="content" id="all">
             <ul ng-controller="content">
-                <li ng-repeat="item in data.all">
+                <li ng-repeat="item in data.all" ng-click="part()">
                     <div class="left">
                         <h4>{{item.cap}}</h4>
                         <span class="name">{{item.name}}</span>
@@ -45,7 +45,7 @@
         </div>
         <div id="new" class="content">
             <ul ng-controller="content">
-                <li ng-repeat="item in data.illness">
+                <li ng-repeat="item in data.illness" ng-click="part()">
                     <div class="left">
                         <h4>{{item.cap}}</h4>
                         <span class="name">{{item.name}}</span>
@@ -58,7 +58,7 @@
         </div>
         <div id="topic" class="content">
             <ul ng-controller="content">
-                <li ng-repeat="item in data.conserve">
+                <li ng-repeat="item in data.conserve" ng-click="part()">
                     <div class="left">
                         <h4>{{item.cap}}</h4>
                         <span class="name">{{item.name}}</span>
@@ -71,7 +71,7 @@
         </div>
         <div id="interest" class="content">
             <ul ng-controller="content">
-                <li ng-repeat="item in data.product">
+                <li ng-repeat="item in data.product" ng-click="part()">
                     <div class="left">
                         <h4>{{item.cap}}</h4>
                         <span class="name">{{item.name}}</span>

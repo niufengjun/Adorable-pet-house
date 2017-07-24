@@ -33,7 +33,7 @@ body{
 	padding:10px 5px 5px 5px;
 }
 .content ul li:last-child{
-	margin-bottom: 50px;
+	/*margin-bottom: 50px;*/
 }
 .content ul li .left{
 	float:left;

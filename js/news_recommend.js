@@ -11,5 +11,8 @@ var app=angular.module("app",[]);
         url:"json/data.json"
     }).success(function(res){
         $scope.data=res.note;
-    })
+    });
+    $scope.part=function(){
+    	window.location.href="news_details.html"
+    }
 });

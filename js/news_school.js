@@ -4,7 +4,7 @@ $(function(){
 	    $(this).addClass("recommend");
     });
     $("#all").siblings("#interest").css({
-        marginBottom:"50px"
+//      marginBottom:"50px"
     })
     $(".note .nav a span").click(function(){
     	$(".note .nav a span").removeClass()
@@ -18,7 +18,7 @@ $(function(){
         }else{
             $(".content").hide();
             $(id).children().children().last().css({
-                marginBottom:"50px"
+//              marginBottom:"50px"
             });
             $(id).css({
                 display:"block",
@@ -36,5 +36,8 @@ app.controller("content",function($scope,$http){
 		url:"json/data.json"
 	}).success(function(res){
 		$scope.data=res.school;
-	})
+	});
+	$scope.part=function(){
+		window.location.href="news_details.html"
+	}
 });
