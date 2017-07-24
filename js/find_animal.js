@@ -6,5 +6,5 @@ app.controller("main",function($scope,$http){
 	});
 });
 $(".back").click(function(){
-        window.history.back(-1);
+        window.location.href="news_recommend.html"
     })
